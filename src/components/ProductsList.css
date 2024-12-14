@@ -1,0 +1,238 @@
+.pro-container {
+  padding: 10px 40px;
+  min-height: 90vh;
+}
+
+.pro-container h1 {
+  text-align: center;
+}
+
+.products-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  padding: 0px 20px;
+}
+
+.categories-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.categories-dropdown select {
+  padding: 8px 30px 8px 10px;
+  font-size: 14px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: var(--background);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.categories-dropdown select:hover {
+  box-shadow: var(--shadow);
+}
+
+.categories-dropdown select:focus {
+  border-color: var(--accent);
+}
+
+.categories-dropdown select option {
+  background-color: var(--card-background);
+  color: var(--text-secondary);
+  padding: 10px;
+  border: var(--accent) 2px solid;
+}
+
+.products-head .add {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--background);
+  background-color: var(--button-success);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.products-head .add svg {
+  margin-right: 5px;
+  font-size: 1.4rem;
+}
+
+.products-head .add:hover {
+  background-color: var(--button-success-hover);
+  scale: 0.96;
+  cursor: pointer;
+}
+
+.product-link {
+  all: unset;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  border-radius: 20px;
+
+}
+
+
+.product:hover {
+  box-shadow: var(--shadow);
+  scale: 1.02;
+  cursor: pointer;
+  
+}
+
+
+.card-body {
+  background-color: var(--card-background);
+  height: 300px;
+  width: 180px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  flex-direction: column;
+  border: 1.2px solid var(--border);
+
+}
+
+
+.card-body .card-img {
+  width: calc(100% - 20px);
+  height: 150px;
+  background-color: var(--background);
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.card-body img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.card-body img.loaded {
+  opacity: 1;
+}
+
+.card-content {
+  width: calc(100% - 15px);
+  padding: 10px;
+}
+
+.card-category {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  margin: 15px 0 8px 0;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+}
+
+.card-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-buttons button:hover {
+  scale: 0.95;
+  cursor: pointer;
+}
+
+.card-buttons button svg {
+  font-size: 1.3rem;
+}
+
+.card-buttons .update-button {
+  background-color: var(--edit-button);
+  color: var(--accent);
+}
+
+.card-buttons .delete-button {
+  background-color: var(--delete-button);
+  color: var(--delete-text);
+}
+
+.show-more {
+  display: flex;
+  justify-content: center;
+}
+
+.show-more button {
+  margin: 30px 0;
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: var(--background);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.show-more button:hover {
+  background-color: var(--accent-hover);
+  scale: 0.98;
+}
