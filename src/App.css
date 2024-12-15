@@ -13,6 +13,8 @@
   --delete-button: rgba(255, 0, 0, 0.15);
   --delete-text: rgb(255, 0, 0);
   --edit-button: rgba(138, 43, 226, 0.15);
+  --cart-button: rgba(76, 175, 80, 0.2);
+  --cart-text: #4CAF50;
   --shadow: 0 0 15px rgba(225, 168, 255, 0.4);
 }
 
@@ -32,9 +34,14 @@ body {
   overscroll-behavior-x: none;
 }
 
-.Link{
+button {
+  border: none;
+}
+
+.Link {
   text-decoration: none;
 }
+
 .coming-soon {
   text-align: center;
   height: 90vh;
@@ -51,6 +58,83 @@ body {
   margin-bottom: 40px;
 }
 
+.product-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container {
+  width: 600px;
+
+}
+
+.form-section {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 95%;
+}
+
+.product-form h1 {
+  text-align: center;
+  color: #4e36a6;
+  margin-bottom: 25px;
+  font-size: 24px;
+
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4e36a6;
+  box-shadow: 0 0 0 3px rgba(78, 54, 166, 0.1);
+  outline: none;
+}
+
+
+.product-form button {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #4e36a6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.product-form button:hover {
+  background-color: #3c2b8f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 54, 166, 0.2);
+}
 
 * {
   scrollbar-width: thin;
@@ -75,4 +159,16 @@ body {
   border-radius: 10px;
   border: 2px solid #ece8f3;
   transition: all 0.3s ease;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-scroll * {
+  scrollbar-width: none;
+}
+
+.no-scroll *::-webkit-scrollbar {
+  display: none;
 }

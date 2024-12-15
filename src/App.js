@@ -1,36 +1,32 @@
-import ProductsList from "./components/ProductsList";
-import ProductDetails from "./components/ProductDetails";
-import AddProduct from "./components/AddProduct";
-import UpdateProduct from "./components/UpdateProduct";
-import Header from "./components/Header";
-import Home from "./components/Home";
+import ProductsList from "./pages/ProductsPage/ProductsList";
+import ProductDetails from "./pages/SingleProduct/ProductDetails";
+import Header from "./components/Header/Header";
+import Home from "./pages/HomePage/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Footer from './components/Footer';
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Terms from "./pages/Terms";
-import Privacy from "./pages/Privacy";
+import Footer from './components/Footer/Footer';
+import About from "./pages/ComingSoonPages/About";
+import Contact from "./pages/ComingSoonPages/Contact";
+import Terms from "./pages/ComingSoonPages/Terms";
+import Privacy from "./pages/ComingSoonPages/Privacy";
+import Cart from "./pages/ComingSoonPages/Cart";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header/>
+        <Header />
         <Routes>
-        <Route path="/" element={<Home />} />
-
+          <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductsList />} />
-          <Route path="/single/:id" element={<ProductDetails />} />
-          <Route path="/add-product" element={<AddProduct />} />
-          <Route path="/update-product/:id" element={<UpdateProduct />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy" element={<Privacy />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
-        <Footer/>
-
+        <Footer />
       </BrowserRouter>
     </div>
   );

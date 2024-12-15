@@ -1,0 +1,6 @@
+1 - npm install
+2 - npm install json-server
+3 -  npx json-server --watch src/server/db.json --port 5000
+4 - npm start
+
+that's it !
